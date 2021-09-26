@@ -14,10 +14,7 @@ body{
 }
 nav{
 	/*background-image: url("../mangaimg/image1.5.jpg");*/
-	background-color: midnightblue;
-	background-position: top;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-color:#2a3652;
 	height: 100px;
 
 	display: flex;
