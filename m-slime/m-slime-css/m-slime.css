@@ -133,7 +133,7 @@ section{
 
 @media (max-width: 500px){
 	.banner{
-	background-image: url("banner.jpg");
+	background-image: url("../m-slime-img/banner.jpg");
 	background-position: center;
 	background-size: cover;
 
