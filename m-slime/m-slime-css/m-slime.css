@@ -53,7 +53,7 @@ section{
 	rgb(7, 1, 26) 40%,
 	rgba(0,0,0,0.5) 30%,
 	transparent 50%
-	),url("banner.jpg");
+	),url("../m-slime-img/banner.jpg");
 	background-position: center;
 	background-size: cover;
 
