@@ -23,93 +23,237 @@ nav{
 	position: relative;
 }
 
-/*nav::before{
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.5);
-
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	z-index: -1;
-}*/
-
 h2{
 	color: #fff;
 	letter-spacing: 2px;
 	text-shadow: 0 5px 10px rgba(255,255,255,0.5);
 }
 
+@media (max-width: 500px){
+	nav{
+	height: 80px;
+	}
+
+	.logo{
+		width: 80px;
+		height: 80px;
+	}
+}
+
+
+
 /*Start Section*/
-
 section{
-	margin-top: 110px;
+	position: relative;
 }
-
-.cards{
-	width: 650px;
-	height: 220px;
-	background-color: var(--section-color);
-	color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
-	margin:auto;
-}
-
-.images img{
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+/*start banner*/
+.banner{
+	background-image: linear-gradient(
+	105deg,
+	rgb(7, 1, 26) 40%,
+	rgba(0,0,0,0.5) 30%,
+	transparent 50%
+	),url("banner.jpg");
 	background-position: center;
+	background-size: cover;
+
+	position: relative;
 }
 
-h5{
-	color: var(--title-color);
+.banner-container{
+	height: 600px;
 }
 
-.ratings span i{
-	color: yellow;
+.titles{
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+/*end banner*/
+
+/*start episode*/
+.episode-containers{
+	background-color: #404052;
+	color: #fff;
+	box-shadow: 0 0 5px rgba(255,255,255,0.8);
+
+	position: absolute;
+	top: 80%;
+	left: 100px;
+
+	overflow: hidden;
 }
 
-.ratings span i:last-child{
+.episodes{
+	height: 80px;
+	/*background-color: steelblue;*/
+	border-bottom: 2px solid rgba(255,255,255,0.8);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.episodes:last-child{
+	border: 0;
+}
+
+.summery-containers{
+	border-left: 1px solid rgba(255,255,255,0.5);
+	position: relative;
+}
+
+.ratings{
+	float: right;
+	margin-right: 10px;
+}
+
+.summery{
+	width: 300px;
+	height: 350px;
+
+	position: absolute;
+	bottom: 0;
+	right: -20%;
+}
+
+/*start slider*/
+.slider-btn{
+	font-size: 12px;
+	background-color: skyblue;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+.slider-btn:hover{
+	background-color: #2c2c3b;
+	box-shadow: 0 0 5px rgba(255,255,255,0.5);
 	color: #fff;
 }
+/*end slider*/
 
-.lefts{
-	animation: myanileft 0.5s ease;
-}
+@media (max-width: 500px){
+	.banner{
+	background-image: url("banner.jpg");
+	background-position: center;
+	background-size: cover;
 
-.rights{
-	animation: myaniright 0.5s ease;
-}
-
-@keyframes myanileft {
-	0%{
-		transform: translateX(-50px);
-		opacity: 0;
+	position: relative;
 	}
 
-	100%{
-		transform: translateX(0px);
-		opacity: 1;
+	.banner-container{
+	height: 500px;
 	}
+
+	.titles{
+	position: absolute;
+	top: 20%;
+	left: 0;
+	}
+
+	.titles h2{
+		font-size: 25px;
+		font-weight: 900;
+		text-shadow: 0 0 30px black;
+	}
+
+	.episode-containers{
+		left: 0;
+	}
+
+	.summery{
+		display: none;
+	}
+
+	.summery-containers{
+		display: none;
+	}
+
+	.episodes span:last-child{
+		display: none;
+	}
+
+
 }
-
-@keyframes myaniright {
-	0%{
-		transform: translateX(50px);
-		opacity: 0;
-	}
-
-	100%{
-		transform: translate(0px);
-		opacity: 1;
-	}
-}
-
+/*end episode*/
 /*End Section*/
 
+/*Start Footer*/
+.back{
+	height: 900px;
+}
 
+footer{
+	height: auto;
+	background-color: #334756;
+	z-index: -1;
+}
+
+.footer-containers{
+	margin-top: 40px;
+	
+}
+
+.footer-contact-boxs{
+    font-size: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+
+}
+
+
+.footer-contact-texts{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.icons{
+    color: #fff;
+    font-size: 30px;
+   	margin: 10px;
+}
+
+.small-icons{
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.fa-facebook:hover{
+    color: #4267B2;
+    transform: scale(1.017);
+}
+
+.fa-telegram:hover{
+    color: cadetblue;
+}
+
+.fa-envelope:hover{
+    color: darkkhaki;
+}
+
+
+.contact-dev-texts{
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.copyrights{
+	opacity: 0.5;
+}
+
+
+@media(max-width: 500px){
+	.back{
+		height: 940px;
+	}
+
+	.footer-containers{
+		display: none;
+	}
+
+
+}
+
+/*End Footer*/
